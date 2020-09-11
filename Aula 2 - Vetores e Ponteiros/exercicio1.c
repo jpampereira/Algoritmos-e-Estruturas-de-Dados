@@ -1,52 +1,30 @@
-/* 
- * Exercício: Mínimo e máximo
- *
- * Escreva um programa que, dada uma sequência de números inteiros, calcula e devolve o menor e o maior valor dessa sequência.
- *
- * Entrada: Para uma sequência de n números, a entrada é formada por n + 1 valores. O primeiro número indica a quantidade de números que a sequência possui. 
- * Após esse número, a entrada é formada por n números, que compõem a sequência propriamente dita.
- * 
- * Saída: A saída consiste em apenas dois números: o menor valor presente na sequência e o maior valor presente na sequência dada como entrada.
- *
- * Exemplo de teste:
- * 
- * Entrada:
- * 5
- *
- * 3 6 8 2 1
- * 
- * Saída:
- * 1 8
- */
-
 #include <stdio.h>
 
-int main() {
-    int n = 0, i = 0;
+void menor_maior(int* menor, int* maior, int* nums, int n) {
 
-    // Quantidade de números da sequência
-    printf("Entrada:\n");
-    scanf("%d", &n);
-
-    int valores[n];
-
-    // Recebendo os números da sequência
-    printf("\n");
-    for(i = 0; i < n; i++) {
-        scanf("%d", &valores[i]);
-    }
-
-    // Encontrando o menor e o maior valor da sequência
-    int maior = valores[0], menor = valores[0];
-    for(i = 1; i < n; i++) {
-        if(valores[i] > maior) {
-            maior = valores[i];
-        } else if(valores[i] < menor) {
-            menor = valores[i];
+    *maior = nums[0], *menor = nums[0];
+    for(int i = 1; i < n; i++) {
+        if(nums[i] > *maior) {
+            *maior = nums[i];
+        } else if(nums[i] < *menor) {
+            *menor = nums[i];
         }
     }
 
-    printf("\nSaída:\n");
+}
+
+int main() {
+    int n = 0;
+    scanf("%d", &n);
+    int nums[n];
+
+    for(int i = 0; i < n; i++) {
+        scanf("%d", &nums[i]);
+    }
+    
+    int menor, maior;
+    menor_maior(&menor, &maior, nums, n);
+
     printf("%d %d\n", menor, maior);
 
     return 0;

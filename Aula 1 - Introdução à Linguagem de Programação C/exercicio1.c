@@ -1,18 +1,3 @@
-/*
- * Exercício: Mostrando números ímpares
- *
- * Escreva um programa que imprime os n primeiros números naturais ímpares.
- * Faça a leitura de um número natural n e a chamada da função criada na função main.
- *
- * Exemplo de teste:
- *
- * Entrada:
- * 4
- *
- * Saída:
- * 1 3 5 7
- */
-
 #include <stdio.h>
 
 void impares(int n) {

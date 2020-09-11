@@ -1,26 +1,3 @@
-/*
- * Exercício: Intercalação de caracteres 
- * 
- * Escreva um programa de intercalação de caracteres. 
- * O seu programa deverá ler duas palavras p1 e p2 e produzir uma terceira s, formada pela intercalação das duas palavras iniciais. 
- * A primeira letra de s é a primeira letra de p1, seguida pela primeira letra de p2, seguida pela segunda letra de p1, seguida pela segunda 
- * letra de p2 e assim por diante.
- *
- * Caso p1 termine, o restante de p2 é concatenado com s. O mesmo raciocínio vale para p2.
- *
- * Entrada: A entrada possui vários casos de teste. O primeira linha contém um número inteiro N que indica o número de testes. 
- * Cada teste é composto por duas palavras apresentadas na mesma linha e separadas por um espaço branco. Cada palavra possui  entre 1 e 50 caracteres, inclusive.
- *
- * Saída: A saída é formada por uma única palavra, que é a intercalação das duas palavras lidas na entrada.
- * 
- * Exemplo de teste:
- * 
- * Entrada      Saída
- * 2
- * Tpo oCder    TopCoder
- * aa bb        abab
- */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

@@ -1,7 +1,6 @@
 #include <stdio.h>
 
 void menor_maior(int* menor, int* maior, int* nums, int n) {
-
     *maior = nums[0], *menor = nums[0];
     for(int i = 1; i < n; i++) {
         if(nums[i] > *maior) {
@@ -10,7 +9,6 @@ void menor_maior(int* menor, int* maior, int* nums, int n) {
             *menor = nums[i];
         }
     }
-
 }
 
 int main() {
